@@ -5,19 +5,22 @@ public class Main {
     public static void main(String[] args) {
         Scanner num_1 = new Scanner (System.in);
         System.out.print("Введите первое число:");
-        int num1;
-        num1 = num_1.nextInt();
+        float num1;
+        num1 = num_1.nextFloat();
         Scanner num_2 = new Scanner (System.in);
         System.out.print("Введите второе число:");
-        int num2;
-        num2 = num_2.nextInt();
+        float num2;
+
+        num2 = num_2.nextFloat();
         System.out.println("num 1 = " + num1);
         System.out.println("num 2 = " + num2);
-        int sum = num1 + num2;
+        float sum = num1 + num2;
         System.out.println("Сумма двух чисел = " + sum);
-        int raz = num1 - num2;
+        float raz = num1 - num2;
         System.out.println("Разница двух чисел = " + raz);
-        int chas = num1 / num2;
+        float chas = num1 / num2;
         System.out.println("Частное двух чисел = " + chas);
+        float umn = num1 * num2;
+        System.out.println("Умножение двух чисел =" + umn);
     }
 }
