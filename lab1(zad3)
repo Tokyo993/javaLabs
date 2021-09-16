@@ -1,0 +1,19 @@
+
+package com.company;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner num_1 = new Scanner(System.in);
+        System.out.print("Введите длину стороны a: ");
+        float a;
+        a = num_1.nextFloat();
+        Scanner num_2 = new Scanner(System.in);
+        System.out.print("Введите длину стороны b: ");
+        float b;
+        b = num_2.nextFloat();
+        double c = Math.sqrt(a * a + b * b);
+        System.out.println("Гипотенуза = " + c);
+
+    }
+}
