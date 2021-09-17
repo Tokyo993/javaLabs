@@ -1,0 +1,18 @@
+
+package com.company;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+           Scanner num_1 = new Scanner (System.in);
+           System.out.print("Введите первое число:");
+           float n;
+           n = num_1.nextFloat();
+           int i = 1;
+           while(i <= n){
+               System.out.println(Math.pow(2 , i));
+               i++;
+           }
+
+    }
+}
