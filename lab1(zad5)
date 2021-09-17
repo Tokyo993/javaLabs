@@ -2,12 +2,22 @@ package com.company;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
-        Scanner num_1 = new Scanner (System.in);
-        System.out.print("Введите число корень которого надо найти:");
-        float n;
-        n = num_1.nextFloat();
-        System.out.println(Math.sqrt(n));
-    }
+    static void sqrt(long a) {
+        double b = a;
+        int i = 0;
+        while ((b * b > a) && (i < 200)) {
+            b = (b + a / b) / 2;
+            i++;
+        }
+        System.out.print(b);
     }
 
+    public static void main(String[] args) {
+
+        Scanner num_1 = new Scanner(System.in);
+        System.out.print("Введите число корень которого найдо найти:");
+        long n;
+        n = num_1.nextLong();
+        sqrt(n);
+    }
+}
