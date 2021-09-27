@@ -1,0 +1,26 @@
+package com.company;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in); // объект класса Scanner
+        System.out.print("Введите строку s1: ");
+        String s1 = scn.next();
+        System.out.print("Введите строку s2: ");
+        String s2 = scn.next();
+        System.out.print("Введите строку s3: ");
+        String s3 = scn.next();
+        System.out.print("Введите строку s4: ");
+        String s4 = scn.next();
+        System.out.print("Введите строку s5: ");
+        String s5 = scn.next();
+        if(s4.equals(s5)) {
+            System.out.println(s1+""+s2);
+        }
+        else {
+            System.out.println(s1+""+s3);
+        }
+    }
+
+}
