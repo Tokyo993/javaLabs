@@ -1,0 +1,28 @@
+package com.company;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+            Scanner scn = new Scanner(System.in); // объект класса
+            System.out.print("введите n(от 1 до 30): ");
+            int n = scn.nextInt();
+            if(n>30 || n<1) {
+                System.out.println("Неверное число, введите от 1 до 30ти");
+
+            }
+            int[] arr = new int[n];
+            for (int i=0;i<n;i++){
+                arr[i]=(int)(Math.random()*100);
+                System.out.print(arr[i]+" ");
+            }
+            int even=0, odd=0;
+            for(int i=0; i<n; i++) {
+                if(arr[i]%2==0) even+=arr[i];//высчитываем суммучётных/нечётных элементов
+                else odd+=arr[i];
+            }
+            System.out.println("сумма чётных = "+even+", сумма нечётных = "+odd);
+
+        }
+
+    }
