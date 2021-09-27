@@ -1,0 +1,45 @@
+package com.company;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in); // объект класса Scanner
+        System.out.print("Введите n(от 1 до 25 ): ");
+        int n = scn.nextInt();
+        if(n>25 || n<1) {
+            System.out.println("число не подходит (введите от 1 до 25ти)");
+        }
+
+        int[] arr = new int[n];
+        for (int i=0;i<n;i++){
+            arr[i]=(int)(Math.random()*100);//реализация рандома с
+
+            System.out.print(arr[i]+" ");
+        }
+        int max=arr[0], maxin=0;
+        for(int i = 0; i<n; i++) {
+            if(max<arr[i]) {
+                max = arr[i];
+                maxin = i;
+            }
+        }
+        int min=arr[0], minin=0;
+        for(int i = 0; i<n; i++) {
+            if(min>arr[i]) {
+                min = arr[i];
+                minin = i;
+            }
+        }
+        int temp = arr[minin];
+        arr[minin]=arr[maxin];
+        arr[maxin]=temp;
+        System.out.println();
+        System.out.println("Результат :");
+        for (int i=0;i<n;i++){
+            System.out.print(arr[i]+" ");
+
+        }
+    }
+
+}
